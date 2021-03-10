@@ -2,8 +2,9 @@
   "development": {
     "username": "postgress",
     "password": "GoGigi19?",
-    "database": "database_development",
+    "database": "musicianbook",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres",
+    "operatorsAlias": false
   }
 }

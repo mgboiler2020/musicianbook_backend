@@ -1,0 +1,25 @@
+{
+  "name": "project4_backend",
+  "version": "1.0.0",
+  "description": "backend server",
+  "main": "index.js",
+  "dependencies": {
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgboiler2020/musicianbook_backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgboiler2020/musicianbook_backend/issues"
+  },
+  "homepage": "https://github.com/mgboiler2020/musicianbook_backend#readme"
+}
