@@ -7,7 +7,7 @@ const cors = require('cors');
 
 const app = express();
 const routes = require('./routes');
-const constants = require('./constants');
+// const constants = require('./constants');
 
 const corsOptions = {
     origin: ['http://localhost:3000'],
@@ -35,13 +35,13 @@ const verifyToken = (req, res, next) => {
     })
 }
 
-app.use('/auth', routes.auth);
-app.use('/city', routes.city);
-app.use('/post/all', routes.post);
-app.use('/post/city', routes.post);
-app.use('/auth/verify', verifyToken, routes.auth);
-app.use('/user', verifyToken, routes.user);
-app.use('/post', verifyToken, routes.post);
+// app.use('/auth', routes.auth);
+// app.use('/city', routes.city);
+// app.use('/post/all', routes.post);
+// app.use('/post/city', routes.post);
+// app.use('/auth/verify', verifyToken, routes.auth);
+// app.use('/user', verifyToken, routes.user);
+// app.use('/post', verifyToken, routes.post);
 
 
 app.listen(process.env.PORT, () => {
