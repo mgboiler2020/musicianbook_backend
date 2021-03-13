@@ -1,12 +1,14 @@
 // const Post = require('../models').Post;
-const City = require('../models').User;
+// const City = require('../models').User;
+const User = require('../models').User;
 
-const constants = require('../constants');
+// const constants = require('../constants');
 
 const getAll = (req, res) => {
+    console.log('inside getAll');
     User.findAll()
     .then(users => {
-        res.status(constants.SUCCESS).json(users)
+        res.status(200).json(users)
     })
     .catch(err => {
         console.log(err);
