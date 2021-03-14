@@ -11,10 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Session.belongsToMany(models.User, {
-    through: "UserSession",
-    foreignKey: "userId",
-    otherKey: "sessionId",
-  });
+        through: "UserSession",
+        foreignKey: "sessionId",
+        otherKey: "userId",
+      });
 }
   }
   Session.init({
