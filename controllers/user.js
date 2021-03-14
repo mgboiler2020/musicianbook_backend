@@ -1,20 +1,37 @@
-// const Post = require('../models').Post;
-// const City = require('../models').User;
 const User = require('../models').User;
 
 // const constants = require('../constants');
 
-const getAll = (req, res) => {
-    console.log('inside getAll');
+const getUserList = (req, res) => {
+    console.log(User);
     User.findAll()
     .then(users => {
         res.status(200).json(users)
+        
     })
     .catch(err => {
         console.log(err);
-        // res.status(constants.INTERNAL_SERVER_ERROR).send(`ERROR: ${err}`);
     })
 }
+
+// const getProfile = (req, res) => {
+//     console.log('inside getProfile');
+//     console.log(req.params.id);
+//     User.findByPk(req.params.id, {
+//         include: [
+//             {
+//                 model: Session,
+//                 attributes: ['id', 'sessionName']
+//             },
+//         ]
+//     })
+//     .then(user => {
+//         res.status(200).json(user)
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     })
+// }
 
 // const getUserById = (req, res) => {
 //     let sort = 'DESC';
@@ -46,6 +63,7 @@ const getAll = (req, res) => {
 // }
 
 module.exports = {
-    getAll,
+    getUserList
+    // getProfile,
     // getCityById
 }
