@@ -28,7 +28,7 @@ const login = (req, res) => {
 const signup = (req, res) => {
     User.create(req.body)
     .then(newUser => {
-        res.redirect(`/users/profile/${newUser.id}`);
+        res.status(200).json(newUser);
     })
   
 }
