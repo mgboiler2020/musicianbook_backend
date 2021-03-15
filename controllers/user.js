@@ -14,6 +14,27 @@ const getUserList = (req, res) => {
     })
 }
 
+const login = (req, res) => {
+    console.log(req.body);
+    User.findOne({
+        where: {
+            username: req.body.username,
+            password: req.body.password
+        }
+    })
+}
+
+//Allow a person to enter information and create a user account
+const signup = (req, res) => {
+    User.create(req.body)
+    .then(newUser => {
+        res.redirect(`/users/profile/${newUser.id}`);
+    })
+  
+}
+
+
+
 // const getProfile = (req, res) => {
 //     console.log('inside getProfile');
 //     console.log(req.params.id);
@@ -63,7 +84,9 @@ const getUserList = (req, res) => {
 // }
 
 module.exports = {
-    getUserList
+    getUserList,
+    login,
+    signup,
     // getProfile,
     // getCityById
 }
