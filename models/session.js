@@ -12,8 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Session.belongsToMany(models.User, {
     through: "UserSession",
-    foreignKey: "userId",
-    otherKey: "sessionId",
+    foreignKey: "sessionId",
+    otherKey: "userId",
   });
 }
   }
