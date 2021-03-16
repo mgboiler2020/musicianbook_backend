@@ -14,6 +14,17 @@ const getSessionList = (req, res) => {
     })
 }
 
+const createSession = (req, res) => {
+    Band.create(req.body)
+    .then(newSession => {
+        res.status(200).json(newSession);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+  
+}
+
 // const getProfile = (req, res) => {
 //     console.log('inside getProfile');
 //     console.log(req.params.id);
@@ -64,6 +75,6 @@ const getSessionList = (req, res) => {
 
 module.exports = {
     getSessionList,
-    // getProfile,
+    createSession,
     // getCityById
 }

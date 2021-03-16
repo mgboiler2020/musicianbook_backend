@@ -30,8 +30,8 @@ const signup = (req, res) => {
     .then(newUser => {
         res.status(200).json(newUser);
     })
-  
 }
+
 
 
 
