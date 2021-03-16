@@ -14,6 +14,18 @@ const getBandList = (req, res) => {
     })
 }
 
+//Allow a person to enter information and create a band
+const createBand = (req, res) => {
+    Band.create(req.body)
+    .then(newBand => {
+        res.status(200).json(newBand);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+  
+}
+
 // const getProfile = (req, res) => {
 //     console.log('inside getProfile');
 //     console.log(req.params.id);
@@ -64,6 +76,7 @@ const getBandList = (req, res) => {
 
 module.exports = {
     getBandList,
+    createBand,
     // getProfile,
     // getCityById
 }
