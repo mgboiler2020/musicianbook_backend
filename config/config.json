@@ -1,10 +1,20 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "GoGigi19?",
     "database": "musicianbook_dev",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "operatorsAlias": false
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
