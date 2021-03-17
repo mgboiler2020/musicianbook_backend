@@ -26,6 +26,8 @@ const login = (req, res) => {
 
 //Allow a person to enter information and create a user account
 const signup = (req, res) => {
+    console.log(req.body);
+    console.log('in signup on backend');
     User.create(req.body)
     .then(newUser => {
         res.status(200).json(newUser);
