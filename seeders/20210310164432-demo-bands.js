@@ -20,11 +20,11 @@ module.exports = {
           genre: 'Classic Rock'
       },
       {
-          bandName: 'Dire Straits',
-          showDates: 'April, 1 1979',
-          location: 'Liverpool, England',
-          currentProjects: 'On the Night',
-          pastProjects: 'Brothers in Arms',
+          bandName: 'Rolling Stones',
+          showDates: 'June 17th, 1967',
+          location: 'London, England',
+          currentProjects: 'Live Hits',
+          pastProjects: 'Exile on Main Sreet',
           genre: 'Classic Rock'
       }
       ], {});
