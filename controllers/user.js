@@ -34,6 +34,15 @@ const signup = (req, res) => {
     })
 }
 
+//Edit user
+const editUser = (req, res) => {
+    console.log(req.body);
+    console.log('in edit user on backend');
+    User.update(req.body)
+    .then(updatedUser => {
+        res.status(200).json(newUser);
+    })
+}
 
 
 
@@ -89,6 +98,7 @@ module.exports = {
     getUserList,
     login,
     signup,
+    editUser,
     // getProfile,
     // getCityById
 }

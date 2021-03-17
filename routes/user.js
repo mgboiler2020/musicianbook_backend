@@ -7,6 +7,6 @@ const ctrl = require('../controllers');
 router.get('/all', ctrl.user.getUserList);
 router.post('/login', ctrl.user.login);
 router.post('/signup', ctrl.user.signup);
-// router.put('/profile', ctrl.user.editProfile);
+router.put('/edit', ctrl.user.editUser);
 
 module.exports = router;
