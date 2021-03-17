@@ -40,10 +40,21 @@ const editUser = (req, res) => {
     console.log('in edit user on backend');
     User.update(req.body)
     .then(updatedUser => {
-        res.status(200).json(newUser);
+        res.status(200).json(updatedUser);
     })
 }
 
+const selectUserById = (req, res) => {
+    console.log(User);
+    User.findOne()
+    .then(user => {
+        res.status(200).json(user)
+        
+    })
+    .catch(err => {
+        console.log(err);
+    })
+}
 
 
 // const getProfile = (req, res) => {
@@ -99,6 +110,7 @@ module.exports = {
     login,
     signup,
     editUser,
+    selectUserById, 
     // getProfile,
     // getCityById
 }
