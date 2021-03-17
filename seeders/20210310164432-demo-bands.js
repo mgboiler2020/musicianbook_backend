@@ -12,12 +12,20 @@ module.exports = {
           genre: 'Classic Rock'
       },
       {
-        bandName: 'Dog House',
-        showDates: 'April, 1 2021',
-        location: 'Frankfort, Indiana',
-        currentProjects: 'Anthology',
-        pastProjects: '5 Dogs',
-        genre: 'Classic Rock'
+          bandName: 'Dire Straits',
+          showDates: 'April, 1 1979',
+          location: 'Liverpool, England',
+          currentProjects: 'On the Night',
+          pastProjects: 'Brothers in Arms',
+          genre: 'Classic Rock'
+      },
+      {
+          bandName: 'Dire Straits',
+          showDates: 'April, 1 1979',
+          location: 'Liverpool, England',
+          currentProjects: 'On the Night',
+          pastProjects: 'Brothers in Arms',
+          genre: 'Classic Rock'
       }
       ], {});
   },

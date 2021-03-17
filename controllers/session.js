@@ -15,7 +15,7 @@ const getSessionList = (req, res) => {
 }
 
 const createSession = (req, res) => {
-    Band.create(req.body)
+    Session.create(req.body)
     .then(newSession => {
         res.status(200).json(newSession);
     })

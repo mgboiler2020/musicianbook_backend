@@ -6,9 +6,21 @@ module.exports = {
      {
       sessionName: 'Jam Session',
       genre: 'Classic Rock',
-      sessionDate: 'March, 15 2021',
-      sessionLocation: 'Lafyette, Indiana',
-      }
+      sessionDate: 'March 15, 2021',
+      sessionLocation: 'Lafayette, IN',
+      },
+      {
+      sessionName: 'Blues Jam',
+      genre: 'Blues Rock',
+      sessionDate: 'May 1st, 2021',
+      sessionLocation: 'Memphis, TN',
+      },
+      {
+      sessionName: 'Jazz Jam',
+      genre: 'Jazz',
+      sessionDate: 'June 1st, 2021',
+      sessionLocation: 'Chicago, IL',
+        }
     ], {});
   },
 
