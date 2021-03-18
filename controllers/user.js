@@ -22,8 +22,18 @@ const login = (req, res) => {
             password: req.body.password
         }
     })
+    .then(foundUser =>{
+        if(foundUser){
+            res.status(200).json({'user' : foundUser.id})
+        }
+        else {
+            res.status(400).send(`ERROR: Wrong username and/or password`);
+        }
+    })
+    .catch(err => {
+        res.status(500).send(`ERROR: ${err}`);
+    })
 }
-
 //Allow a person to enter information and create a user account
 const signup = (req, res) => {
     console.log(req.body);
