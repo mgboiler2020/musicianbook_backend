@@ -11,7 +11,7 @@ const routes = require('./routes');
 
 const corsOptions = {
     // origin: ['http://localhost:3000'],
-    origin: ['https://musicianbook-project4.herokuapp.com'],  /// comment out until wanting to see deployed front end.
+    origin: ['http://musicianbook-project4.surge.sh'],  /// comment out until wanting to see deployed front end.
     methods: "GET,POST,PUT,DELETE",
     credentials: true, //allows session cookies to be sent back and forth
     optionsSuccessStatus: 200 //legacy browsers
